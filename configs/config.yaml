@@ -1,0 +1,32 @@
+# Training configuration file
+
+modaname:
+  model: "unsloth/Qwen2-VL-7B-Instruct"
+  dataset: "unsloth/Latex_OCR"
+
+quantization:
+  load_in_4bit: True
+
+LoRA:
+  r: 8
+  lora_alpha: 8
+  lora_dropout: 0
+  random_state: 3407
+
+training:
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  warmup_steps: 5
+  max_steps: 30
+  learning_rate: 2e-4
+  weight_decay: 0.01
+  optimizer: "adamw_8bit"
+  logging_steps: 1
+  dataset_num_proc: 2
+  max_seq_length: 1024
+
+inference:
+  max_new_tokens: 128
+  temperature: 1.5
+  min_p: 0.1
+
