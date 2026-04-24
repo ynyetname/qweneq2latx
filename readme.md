@@ -23,7 +23,6 @@ This is useful for digitizing handwritten or printed math, converting textbook e
 
 ## 📁 Project Structure
 
-```
 qweneq2latx/
 ├── diagrams/
 │   ├── eq2latx.png
@@ -42,7 +41,6 @@ qweneq2latx/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-```
 
 ---
 
@@ -159,9 +157,6 @@ git clone https://github.com/YOUR_USERNAME/qweneq2latx.git
 Go to [colab.research.google.com](https://colab.research.google.com) → upload notebooks from `notebooks/` folder.
 
 ### Step 3 — Enable GPU
-```
-Runtime → Change Runtime Type → T4 GPU → Save
-```
 
 ### Step 4 — Run notebooks in order
 
@@ -215,12 +210,12 @@ pip install -r requirements.txt
 ## 💡 Tips & Troubleshooting
 
 - **Save model to Drive** to avoid losing progress after Colab timeout:
-  ```python
+```python
   from google.colab import drive
   drive.mount('/content/drive')
   model.save_pretrained("/content/drive/MyDrive/qweneq2latx/model")
   tokenizer.save_pretrained("/content/drive/MyDrive/qweneq2latx/tokenizer")
-  ```
+```
 - **Out of memory**: Set `BATCH_SIZE = 1` in `configs/train_config.py`
 - **Better accuracy**: Set `MAX_STEPS = 100+` for longer training
 
