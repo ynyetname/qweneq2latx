@@ -23,6 +23,7 @@ This is useful for digitizing handwritten or printed math, converting textbook e
 
 ## 📁 Project Structure
 
+```
 qweneq2latx/
 ├── diagrams/
 │   ├── eq2latx.png
@@ -41,6 +42,7 @@ qweneq2latx/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 
 ---
 
